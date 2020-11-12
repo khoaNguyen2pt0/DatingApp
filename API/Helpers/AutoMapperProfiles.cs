@@ -17,11 +17,12 @@ namespace API.Helpers
                 .ForMember(dest => dest.Age, opt => opt.MapFrom(src => src.DateOfBirth.CalculateAge()));
             CreateMap<Photo, PhotoDto>();
             CreateMap<MemberUpdateDto, AppUser>();
+            CreateMap<RegisterDto, AppUser>();
         }
 
-        private void ForMember(Func<object, object> p1, Func<object, object> p2)
-        {
-            throw new NotImplementedException();
-        }
+        // private void ForMember(Func<object, object> p1, Func<object, object> p2)
+        // {
+        //     throw new NotImplementedException();
+        // }
     }
 }
